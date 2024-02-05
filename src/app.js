@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "express";
 import cookieParser from "cookie-parser";
+// import upload from "./middlewares/multer.middleware.js"
 
 const app  = express(); 
 
@@ -14,8 +15,11 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended: true, limits: "16kb"}))
 app.use(express.static("public"))
 
-// app.get('/', (req, res) => {
-//     res.send('Hello World');
-// })
+// import router
+import userRouter from "./routers/user.router.js"
+
+// use router
+app.use("/api/v1/users", userRouter)
+
 
 export default app;
