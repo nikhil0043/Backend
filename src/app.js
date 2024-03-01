@@ -21,5 +21,11 @@ import userRouter from "./routers/user.router.js"
 // use router
 app.use("/api/v1/users", userRouter)
 
+// test route
+
+app.get('/api/data', (req, res) => {
+    res.json({ message: 'Hello from the API!' });
+});
+
 
 export default app;
