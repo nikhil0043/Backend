@@ -23,7 +23,7 @@ app.use("/api/v1/users", userRouter)
 
 // test route
 
-app.get('/api/data', (req, res) => {
+app.get('/api/test', (req, res) => {
     res.json({ message: 'Hello from the API!' });
 });
 
